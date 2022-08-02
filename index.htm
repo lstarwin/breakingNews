@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="assets/fonts/iconfont.css">
     <link rel="stylesheet" href="assets/css/index.css">
     <script src="assets/lib/jquery.js"></script>
+    <script src="assets/js/base.js"></script>
+    <script src="assets/js/index.js"></script>
 </head>
 
 <body>
@@ -20,8 +22,11 @@
             <!-- 头部区域（可配合layui 已有的水平导航） -->
             <ul class="layui-nav layui-layout-right">
                 <li class="layui-nav-item layui-hide layui-show-md-inline-block">
+                    <!-- 用户头像 -->
                     <a href="javascript:;">
-                        <img src="//tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" class="layui-nav-img"> 个人中心
+                        <img src="//tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" class="layui-nav-img">
+                        <span class="avatar">A</span>个人中心
+
                     </a>
                     <dl class="layui-nav-child">
                         <dd><a href=""><i class="layui-icon layui-icon-align-right"></i>&nbsp;基本资料</a></dd>
@@ -29,7 +34,7 @@
                         <dd><a href=""><i class="layui-icon layui-icon-set-fill"></i>&nbsp;重量密码</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item layui-show-md-inline-block"><a href="javascript:;"><i
+                <li class="layui-nav-item layui-show-md-inline-block"><a href="javascript:;" id="btnLogout"><i
                             class="layui-icon layui-icon-logout"
                             style="font-size: 20px; color: #1E9FFF;padding-top:5px;"></i>&nbsp;退出</a>
                 </li>
@@ -43,13 +48,14 @@
 
         <div class="layui-side layui-bg-black">
             <div class="layui-side-scroll">
+                <!-- 用户头像 -->
+                <div class="hello">
+                    <img src="//tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" class="layui-nav-img">
+                    <span class="avatar">A</span>
+                    <span class="welcome">您好,帅哥</span>
+                </div>
                 <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
                 <ul class="layui-nav layui-nav-tree" lay-filter="test" lay-shrink="all">
-                    <li class="layui-nav-item hello">
-                        <a href="javascript:;">
-                            <img src="//tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" class="layui-nav-img"> 您好,帅哥
-                        </a>
-                    </li>
                     <li class="layui-nav-item"><a href="home/dashboard.html" target="fm"><i
                                 class="layui-icon layui-icon-home "
                                 style="font-size: 20px; color: #1E9FFF; "></i>&nbsp;首&emsp;&emsp;页</a></li>
@@ -89,7 +95,7 @@
 
         <div class="layui-body ">
             <!-- 内容主体区域 -->
-            <iframe src="" frameborder="0" name="fm"></iframe>
+            <iframe src="/home/dashboard.html" frameborder="0" name="fm"></iframe>
         </div>
 
         <div class="layui-footer ">

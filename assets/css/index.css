@@ -12,3 +12,18 @@
     left: 50% !important;
     transform: translate(-50%, -50%) !important;
 }
+
+.iconfont {
+    margin: 0 5px 0 10px;
+    font-size: 15px;
+    color: #fda0e6;
+}
+
+.layui-icon {
+    margin-right: 3px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}

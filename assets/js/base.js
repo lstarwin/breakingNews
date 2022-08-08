@@ -9,7 +9,7 @@ $.ajaxPrefilter(function(option) {
             Authorization: localStorage.getItem('token') || ''
         }
     }
-    未登陆并授权用户返回处理
+    //未登陆并授权用户返回处理
     option.complete = function(res) {
         //登陆不成功
         if (res.responseJSON.status === 1) {

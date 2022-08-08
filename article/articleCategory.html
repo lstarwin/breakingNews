@@ -20,7 +20,7 @@
     <div class="layui-card">
         <div class="layui-card-header">
             <h3>文章分类管理</h3>
-            <button type="button" class="layui-btn layui-btn-normal layui-btn-sm">添加类别</button>
+            <button type="button" class="layui-btn layui-btn-normal layui-btn-sm" id="btnAddCategory">添加类别</button>
         </div>
         <div class="layui-card-body">
             <table class="layui-table">
@@ -53,16 +53,16 @@
     </div>
 </body>
 <script type="text/html" id="tmp">
+    {{each data}}
     <tr>
-        <td>贤心</td>
-        <td>2016-11-29</td>
-        <td>人生就像是一场修行</td>
+        <td>{{$value.name}}</td>
+        <td>{{$value.alias}}</td>
+        <td>
+            <button type="button" class="layui-btn   layui-btn-sm">编辑</button>
+            <button type="button" class="layui-btn  layui-btn-danger layui-btn-sm">删除</button>
+        </td>
     </tr>
-    <tr>
-        <td>许闲心</td>
-        <td>2016-11-28</td>
-        <td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
-    </tr>
+    {{/each}}
 </script>
 
 </html>

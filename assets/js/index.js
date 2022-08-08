@@ -1,5 +1,5 @@
 $(function() {
-        // getUserInfo();
+        getUserInfo();
         $('#btnLogout').on('click', function() {
             layer.confirm('确定要退出码?', {
                 icon: 3,

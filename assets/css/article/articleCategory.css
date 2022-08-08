@@ -14,3 +14,7 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
+[lay-filter=dialogFormData] {
+    padding: 20px 30px;
+}

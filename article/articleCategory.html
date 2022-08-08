@@ -52,6 +52,7 @@
         </div>
     </div>
 </body>
+<!-- 表格数据模板 -->
 <script type="text/html" id="tmp">
     {{each data}}
     <tr>
@@ -63,6 +64,29 @@
         </td>
     </tr>
     {{/each}}
+</script>
+<!-- 弹出层内容 -->
+<script type="text/html" id="dialogContent">
+    <form class="layui-form" lay-filter="dialogFormData">
+        <div class="layui-form-item">
+            <label class="layui-form-label">分类名称:</label>
+            <div class="layui-input-block">
+                <input type="text" name="name" required lay-verify="required" placeholder="请输入分类名称" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">分类别名:</label>
+            <div class="layui-input-block">
+                <input type="text" name="alias" required lay-verify="required" placeholder="请输入分类别名" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="formDemo">确认添加</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </form>
 </script>
 
 </html>

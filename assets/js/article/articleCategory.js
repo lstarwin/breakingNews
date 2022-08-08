@@ -2,8 +2,9 @@ var layer = layui.layer;
 var form = layui.form;
 $(function() {
     getArticleList();
+    var openIndex;
     $('#btnAddCategory').on('click', function() {
-        layer.open({
+        openIndex = layer.open({
             type: 1,
             title: ['添加文章分类:', 'color:#f39292'],
             anim: 6,
@@ -18,7 +19,10 @@ $(function() {
             url: '/my/article/addcates',
             data: $(this).serialize(),
             success: function(res) {
-                console.log(res);
+                layer.msg(res.message);
+                if (status === 0) {
+                    layer.close(openIndex);
+                }
             }
         })
     })

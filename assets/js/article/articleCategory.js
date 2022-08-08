@@ -11,15 +11,14 @@ $(function() {
             content: $('#dialogContent').html() //这里content是一个普通的String
         });
     })
-    $('body').on('submit', '[lay-filter=dialogFormData]', function(e) {
+    $('body').on('submit', '#dialogFormData', function(e) {
         e.preventDefault();
         $.ajax({
             method: 'post',
             url: '/my/article/addcates',
-            data: form.val('dialogFormData'),
+            data: $(this).serialize(),
             success: function(res) {
                 console.log(res);
-
             }
         })
     })

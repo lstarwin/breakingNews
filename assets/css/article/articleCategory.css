@@ -15,6 +15,6 @@ body {
     align-items: center;
 }
 
-[lay-filter=dialogFormData] {
+#dialogFormData {
     padding: 20px 30px;
 }

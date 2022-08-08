@@ -12,11 +12,11 @@ $.ajaxPrefilter(function(option) {
     //未登陆并授权用户返回处理
     option.complete = function(res) {
         //登陆不成功
-        if (res.responseJSON.status === 1) {
-            //强制删除localStorage
-            localStorage.removeItem('token');
-            //返回登陆页面
-            location.href = '/login.htm';
-        }
+        // if (res.responseJSON.status === 1) {
+        //     //强制删除localStorage
+        //     localStorage.removeItem('token');
+        //     //返回登陆页面
+        //     location.href = '/login.htm';
+        // }
     }
 })

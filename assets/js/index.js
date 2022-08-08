@@ -19,11 +19,15 @@ function getUserInfo() {
         url: '/my/userinfo',
         method: 'get',
         success: function(res) {
-            if (!res.status) {
+            if (res.status === 0) {
                 return renderAvadar(res.data);
             }
             layui.layer.msg('获取用户信息失败!!!')
-            renderAvadar(res.data);
+                //无登陆信息或登陆不成功
+                //强制删除localStorage
+            localStorage.removeItem('token');
+            //返回登陆页面
+            location.href = '/login.htm';
         }
     })
 }

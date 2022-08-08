@@ -1,5 +1,5 @@
 $(function() {
-        getUserInfo();
+        // getUserInfo();
         $('#btnLogout').on('click', function() {
             layer.confirm('确定要退出码?', {
                 icon: 3,
@@ -23,6 +23,7 @@ function getUserInfo() {
                 return renderAvadar(res.data);
             }
             layui.layer.msg('获取用户信息失败!!!')
+            renderAvadar(res.data);
         }
     })
 }

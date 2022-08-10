@@ -15,6 +15,7 @@ body {
     align-items: center;
 }
 
-#dialogFormData {
+#dialogFormData_add,
+#dialogFormData_edit {
     padding: 20px 30px;
 }

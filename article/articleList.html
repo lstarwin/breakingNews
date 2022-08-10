@@ -12,6 +12,7 @@
     <script src="../assets/lib/jquery.js"></script>
     <script src="../assets/lib/template-web.js"></script>
     <script src="../assets/js/base.js"></script>
+    <script src="../assets/js/article/articles.js"></script>
     <script src="../assets/js/article/articleList.js"></script>
 </head>
 
@@ -23,12 +24,7 @@
             <form class="layui-form">
                 <!-- 文章类别选择 -->
                 <div class="layui-form-item layui-inline">
-                    <select name="city" lay-verify="" lay-filter='city'>
-                        <option value="">请选择一个城市</option>
-                        <option value="010">北京</option>
-                        <option value="021">上海</option>
-                        <option value="0571">杭州</option>
-                    </select>
+                    <select name="cate_name" lay-verify="" lay-filter='city'></select>
                 </div>
                 <!-- 文章状态选择 -->
                 <div class="layui-form-item layui-inline">
@@ -79,6 +75,12 @@
             </td>
 
         </tr>
+        {{/each}}
+    </script>
+    <script type="text/html" id="select_load_articleCategory">
+        <option value="">请选择文章类别</option>
+        {{each data}}
+        <option value="{{$value.name}}">{{$value.name}}</option>
         {{/each}}
     </script>
 </body>

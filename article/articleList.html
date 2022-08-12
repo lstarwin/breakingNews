@@ -8,8 +8,8 @@
     <title>文章列表</title>
     <link rel="stylesheet" href="../assets/lib/layui/css/layui.css">
     <link rel="stylesheet" href="../assets/css/article/articleList.css">
-    <script src="../assets/lib/layui/layui.all.js"></script>
     <script src="../assets/lib/jquery.js"></script>
+    <script src="../assets/lib/layui/layui.all.js"></script>
     <script src="../assets/lib/template-web.js"></script>
     <script src="../assets/js/base.js"></script>
     <script src="../assets/js/article/articles.js"></script>
@@ -21,21 +21,21 @@
         <div class="layui-card-header">文章列表</div>
         <div class="layui-card-body">
             <!-- 顶部查询 -->
-            <form class="layui-form">
+            <form class="layui-form" id='formFilter'>
                 <!-- 文章类别选择 -->
                 <div class="layui-form-item layui-inline">
-                    <select name="cate_name" lay-verify="" lay-filter='city'></select>
+                    <select name="cate_id" lay-verify=""></select>
                 </div>
                 <!-- 文章状态选择 -->
                 <div class="layui-form-item layui-inline">
-                    <select name="city" lay-verify="">
+                    <select name="state" lay-verify="">
                         <option value="">所有状态</option>
                         <option value="已发布">已发布</option>
                         <option value="草稿">草稿</option>
                     </select>
                 </div>
                 <div class="layui-form-item layui-inline">
-                    <button type="button" class="layui-btn">筛选</button>
+                    <button type="button" class="layui-btn" lay-submit>筛选</button>
                 </div>
             </form>
             <!-- 中间列表 -->
@@ -59,6 +59,7 @@
                 <tbody></tbody>
             </table>
             <!-- 底部分页 -->
+            <div id="pageBox"></div>
         </div>
     </div>
     <!-- 文章列表数据模板 -->
@@ -71,7 +72,7 @@
             <td>{{$value.state}}</td>
             <td>
                 <button type="button" class="layui-btn layui-btn-sm">编辑</button>
-                <button type="button" class="layui-btn layui-btn-sm layui-btn-danger">删除</button>
+                <button type="button" class="layui-btn layui-btn-sm layui-btn-danger btn-del" data-id={{$value.Id}}>删除</button>
             </td>
 
         </tr>
